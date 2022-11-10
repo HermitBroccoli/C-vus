@@ -15,15 +15,15 @@ void SpeedTrain(float s, float t)
          << round((v * 3.6) * 1000) / 1000 << " км/ч" << endl;
 }
 
-void areaTriangle(float a, float b) {
-
+void areaTriangle(float a, float b)
+{
     float S, h;
 
-    h = sqrt(pow(b, 2) - (pow(a, 2) / 4));
-
-    S = (0.5 * b) * h;
-
-    cout << "Площадь треугольника: " << S << " мм квадратных" << endl;
+    h = sqrt(pow(b, 2) - pow((a / 2), 2));
+    
+    S = 0.5 * (a * h);
+    
+    cout << "Площадь треугольника: " << S << " квадратных единиц" << endl;
 }
 
 int main(int argc, char const *argv[])
@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
     cin >> times;
 
     // передаём параметры в функцию
-    // SpeedTrain(space, times);
+    SpeedTrain(space, times);
 
     // 2 task равнобедренный треугольник
     areaTriangle(16, 10);
